@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/city_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,8 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0.0,
         backgroundColor: Colors.transparent,
         leading: const Padding(
-          padding:  EdgeInsets.only(left: 5.0),
-          child:  Icon(
+          padding: EdgeInsets.only(left: 5.0),
+          child: Icon(
             Icons.navigation,
             size: 50.0,
             color: Colors.white,
@@ -45,7 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) =>  CityPage()),
+                  ),
+                );
+              },
               icon: const Icon(
                 Icons.location_city,
                 size: 50.0,
