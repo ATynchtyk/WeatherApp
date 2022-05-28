@@ -71,31 +71,33 @@ class _MyHomePageState extends State<MyHomePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text(
-                '8\u00B0⛅️',
-                style: TextStyle(
-                    fontSize: 100.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Жылуу кийин',
-                style: TextStyle(
-                    fontSize: 80,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 100.0,
-              ),
-              Text(
-                'Бишкек',
-                style: TextStyle(fontSize: 50.0, color: Colors.white),
-              ),
-            ]),
+        child: SafeArea(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  '8\u00B0⛅️',
+                  style: TextStyle(
+                      fontSize: 100.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Жылуу кийин',
+                  style: TextStyle(
+                      fontSize: 80,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 100.0,
+                ),
+                Text(
+                  'Бишкек',
+                  style: TextStyle(fontSize: 50.0, color: Colors.white),
+                ),
+              ]),
+        ),
       ),
     );
   }
