@@ -1,11 +1,27 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:weather_app/location_provider.dart';
 
-class CityPage extends StatelessWidget {
-  CityPage({Key key}) : super(key: key);
+class CityPage extends StatefulWidget {
+ const CityPage({Key key}) : super(key: key);
 
-final  TextEditingController _textEditingController = TextEditingController();
+  @override
+  State<CityPage> createState() => _CityPageState();
+
+
+}
+
+class _CityPageState extends State<CityPage> {
+  final TextEditingController _textEditingController = TextEditingController();
+
+     @override
+  void initState() {
+    super.
+    initState();
+    LocationProvider().getCurrentLocation();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +44,7 @@ final  TextEditingController _textEditingController = TextEditingController();
           ),
         ),
         child: Column(
-          children:  [
+          children: [
             const SizedBox(
               height: 200.0,
             ),
@@ -64,7 +80,7 @@ final  TextEditingController _textEditingController = TextEditingController();
                   const Color.fromARGB(255, 81, 83, 81),
                 ),
               ),
-           child:  const Padding(
+              child: const Padding(
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 80),
                 child: Text(
                   'ИЗДЕ',
